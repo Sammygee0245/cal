@@ -1,54 +1,87 @@
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: rgb(255, 255, 255);
-}
-
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
   box-sizing: border-box;
-  background-color: white;
-  outline: none;
+  font-family: sans-serif;
 }
 
-input {
-  width: 360px;
-  margin-left: 20px;
-  height: 90px;
-  font-size: 50px;
+.maincontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  height: 39rem;
+  width: 340px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: inset 5px 5px 12px rgb(226, 217, 217),
+    -5px -5px 15px rgb(158, 157, 157), 5px 5px 15px rgb(158, 157, 157),
+    inset -5px -5px 12px rgb(226, 217, 217);
+  border-radius: 30px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 50px;
+  height: 10px;
+  margin-top: 6px;
+  background-color: rgb(17, 16, 16);
+  border-radius: 20px;
+}
+
+.dot {
+  margin-top: 6px;
+  background-color: rgb(17, 16, 16);
+  width: 8px;
+  height: 8px;
+  margin-left: 7px;
+  border-radius: 50%;
+}
+
+.screen {
+  width: 90%;
+  margin-left: 18px;
   text-align: end;
-  outline: none;
-  border-radius: 50px;
-  box-shadow: inset 5px 5px 12px rgba(235, 224, 224, 0.993),
-    -5px 5px 12px rgb(180, 171, 171);
-  border: none;
+  padding-top: 60px;
   padding-right: 10px;
+  margin-top: 3rem;
+  height: 7rem;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  border: none;
+  box-shadow: inset 5px 5px 8px 2px rgb(219, 217, 217),
+    inset -5px -5px 8px 2px rgb(250, 249, 249);
 }
 
-.buttons {
-  margin-top: 20px;
-  margin-left: 23px;
+.btns {
   display: grid;
-  grid-template-columns: 80px 80px 80px 80px;
-  grid-column-gap: 20px;
-  grid-row-gap: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 1rem;
+  place-items: center;
 }
 
 button {
+  position: relative;
+  margin-top: 12px;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
-  box-shadow: 5px 5px 12px rgb(31, 30, 30), -5px -5px 12px rgb(231, 226, 226);
+  font-size: 17px;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 10px;
   border: none;
-  font-size: 27px;
-}
-
-.equall {
-  width: 162px;
-  height: 60px;
-  border-radius: 90px;
+  box-shadow: inset 5px 5px 10px 1px rgb(231, 229, 229),
+    inset 5px -5px 12px rgb(252, 252, 252), 5px 5px 12px rgb(185, 185, 184);
 }
